@@ -2,12 +2,14 @@
 
 var mongoose = require('mongoose');
 var Counter = require('./Counter');
+var Category = require('./Category');
 
 // schema
 var postSchema = mongoose.Schema({ // 1
     title: { type: String, required: [true, 'Title은 필수 항목입니다!'] },
     body: { type: String, required: [true, 'Body는 필수 항목입니다!'] },
     author: { type: mongoose.Schema.Types.ObjectId, ref: 'user', required: true },
+    category: { type: String },
     views:{type:Number, default:0},
     numId:{type:Number},
     attachment:{type:mongoose.Schema.Types.ObjectId, ref:'file'},

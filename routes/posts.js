@@ -8,6 +8,7 @@ var Comment = require('../models/Comment');
 var File = require('../models/File');
 var util = require('../util');
 
+
 // Index
 router.get('/', async function(req, res){
   var page = Math.max(1, parseInt(req.query.page));
@@ -19,6 +20,7 @@ router.get('/', async function(req, res){
   var maxPage = 0;
   var searchQuery = await createSearchQuery(req.query);
   var posts = [];
+
 
   if(searchQuery) {
     var count = await Post.countDocuments(searchQuery);
@@ -58,6 +60,7 @@ router.get('/', async function(req, res){
           },
           views: 1,
           numId: 1,
+          category: 1,
           attachment: { $cond: [{$and: ['$attachment', {$not: '$attachment.isDeleted'}]}, true, false] },
           createdAt: 1,
           commentCount: { $size: '$comments'}
@@ -87,6 +90,8 @@ router.post('/', util.isLoggedin, upload.single('attachment'), async function(re
   var attachment = req.file?await File.createNewInstance(req.file, req.user._id):undefined;
   req.body.attachment = attachment;
   req.body.author = req.user._id;
+  
+  
   Post.create(req.body, function(err, post){
     if(err){
       req.flash('post', req.body);
@@ -156,6 +161,7 @@ router.put('/:id', util.isLoggedin, checkPermission, upload.single('newAttachmen
     res.redirect('/posts/'+req.params.id+res.locals.getPostQueryString());
   });
 });
+
 
 // destroy
 router.delete('/:id', util.isLoggedin, checkPermission, function(req, res){

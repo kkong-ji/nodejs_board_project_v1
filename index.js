@@ -10,6 +10,7 @@ var passport = require('./config/passport');
 var util = require('./util');
 var app = express();
 
+
 // DB setting
 mongoose.connect(process.env.MONGO_DB);
 var db = mongoose.connection;

@@ -5,6 +5,11 @@
     <%- include('../partials/head') %>
 </head>
 
+<header>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap" rel="stylesheet">
+</header>
+
 <body>
     <%- include('../partials/nav') %>
     <meta charset="utf-8" />
@@ -16,6 +21,13 @@
             <button type="button" class="btm_image" id="img_btn3" onclick="location.href='http://localhost:3000/posts'"><img src="https://cdn-icons-png.flaticon.com/512/948/948036.png">맛집이 많은</button>
             <button type="button" class="btm_image" id="img_btn4" onclick="location.href='http://localhost:3000/posts'"><img src="https://cdn-icons.flaticon.com/png/512/4050/premium/4050056.png?token=exp=1651126962~hmac=af8ef1e92fd7115476d79b61a640ed23">선사유적지</button>
             <button type="button" class="btm_image" id="img_btn5" onclick="location.href='http://localhost:3000/posts'"><img src="https://cdn-icons-png.flaticon.com/512/2942/2942149.png">도시경관이 있는</button>
+        </div>
+        <div id="text_box2" style="line-height: 20%;">
+            <p style="font-size: 15px; font-weight: bold; color:black">여행에 관한 당신의 이야기를 들려주세요! </p>
+            <button class="custom-btn btn-11" onclick="location.href='http://localhost:3000/posts/new'">GO!</button>
+        </div>
+        <div class="frame">
+        
         </div>
         <style>
             body {

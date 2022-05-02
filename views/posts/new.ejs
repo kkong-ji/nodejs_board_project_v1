@@ -35,7 +35,29 @@
                     <label for="attachment">Attachment</label>
                     <input type="file" name="attachment" class="form-control-file" id="attachment">
                 </div>
-                
+
+                <div class="form-group">
+                    <label for="category">Category</label>
+                    <input type = "text" id="changeInput"/>
+                    <select name="category" id="category"
+                        onchange="handleOnChange(this.value)">
+
+                        <option value=""> ==여행테마==</option>
+                        <option value="드라이브코스">드라이브코스</option>
+                        <option value="산 & 바다가 가까운">산 & 바다가 가까운</option>
+                        <option value="맛집이 많은">맛집이 많은</option>
+                        <option value="선사유적지">선사유적지</option>
+                        <option value="도시경관이 있는">도시경관이 있는</option>
+                        <script type="text/javascript" value="<%= post.category %>">
+
+                            var handleOnChange = function(value) {
+                                $("#changeInput").val(value);
+                            }
+                            
+                        </script>
+                    </select>
+                </div>
+
                 <div class="form-group">
                     <label for="body">Body</label>
                     <textarea id="body" name="body" rows="5"
@@ -61,6 +83,7 @@
             </form>
 
         </div>
+        
 </body>
 
 </html>

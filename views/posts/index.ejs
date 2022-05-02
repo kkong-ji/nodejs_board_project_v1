@@ -18,6 +18,7 @@
                     <tr>
                         <th scope="col" class="numId">#</th>
                         <th scope="col">Title</th>
+                        <th scope="col" class="category">Category</th>
                         <th scope="col" class="views">Views</th>
                         <th scope="col" class="author">Author</th>
                         <th scope="col" class="date">Date</th>
@@ -27,7 +28,7 @@
                 <tbody>
                     <% if(posts==null || posts.length==0){ %>
                         <tr>
-                            <td colspan=2> There is no data to show :( </td>
+                            <td colspan=2> 게시물이 없습니다. </td>
                         </tr>
                         <% } %>
                             <% posts.forEach(function(post) { %>
@@ -47,6 +48,9 @@
                                                 <small class="title-attachment d-inline-block pl-2">📁</small>
                                             <% } %>
                                         </a>
+                                    </td>
+                                    <td class="category">
+                                        <%= post.category %>
                                     </td>
                                     <td class="views"><%= post.views %></td>
                                     <td class="author">
