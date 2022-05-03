@@ -74,7 +74,8 @@ router.get('/', async function(req, res){
     maxPage:maxPage,
     limit:limit,
     searchType:req.query.searchType,
-    searchText:req.query.searchText
+    searchText:req.query.searchText,
+    searchCategory:req.query.searchCategory
   });
 });
 
@@ -194,6 +195,9 @@ async function createSearchQuery(queries){
     if(searchTypes.indexOf('body')>=0){
       postQueries.push({ body: { $regex: new RegExp(queries.searchText, 'i') } });
     }
+    if(searchTypes.indexOf('category')>=0){
+      postQueries.push({ category: { $regex: new RegExp(queries.searchText, 'i') } });
+    }
     if(searchTypes.indexOf('author!')>=0){
       var user = await User.findOne({ username: queries.searchText }).exec();
       if(user) postQueries.push({author:user._id});
@@ -206,8 +210,11 @@ async function createSearchQuery(queries){
       }
       if(userIds.length>0) postQueries.push({author:{$in:userIds}});
     }
+
     if(postQueries.length>0) searchQuery = {$or:postQueries};
     else searchQuery = null;
+
   }
   return searchQuery;
 }
+
