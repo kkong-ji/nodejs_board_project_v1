@@ -10,21 +10,35 @@
 <body>
     <%- include('../partials/nav') %>
 
-        <div class="container mb-3">
-
-            <h2 class="mb-3" style="color: white;">About</h2>
-
-            <p style="color:white">여행자들의 소중한 국내 여행 후기! 이 곳에서 확인하세요!</p>
-
+        <div class="background-image">
+            <h1>About</h1>
+            
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=Akshar&family=Dongle:wght@700&family=Oswald&display=swap');
+            </style>
         </div>
-        <style>
-            body {
-                background-image: url("./images/seoul.jpg");
-                background-attachment:fixed;
-                background-size: cover;
-                background-repeat: no-repeat;
-          }
-        </style>
-</body>
 
+        <div class="about_container">
+            <style>
+                h4::first-letter { font-size: 2em; }
+                h4::first-line { color: black }
+            </style>
+            <h4> Welcome to Wonderful Korea! </h4>
+            <p> 해외 여행도 좋지만 국내에는 아름답고 황홀한 명소들이 존재합니다. <br />
+                나만 알기 아까운 국내 명소들. 이제 다른 사람들을 위해 펼쳐보는 것은 어떨까요? <br />
+                다양한 테마 별로 쉽고 빠르게 만나볼 수 있는 다른 여행자들의 국내 여행지 후기  <br />
+                지금 바로 만나보세요!
+            </p>
+        </div>
+</body>
+  <footer>
+    <div class="footer img-wrapper">
+    <div class="img">
+      <a href="https://velog.io/@kjh950330">
+        <img src="https://pbs.twimg.com/profile_images/1228368893321736193/Ov0og7E8_400x400.jpg" style="max-width: 2%; height: auto;" alt="velog">
+      </a>
+    <div class="footertext">
+      copyright(c) 2022. jihan kong. All rights reserved.
+    </div>
+  </footer>
 </html>

@@ -13,22 +13,38 @@
   </header>
 
   <body>
-      <div id="text_box" style="line-height: 20%;">
-        <p style="font-size: 40px; color:black">Wonderful Korea</p>
-        <p style="font-size: 15px; color:black">다양하고 풍부한 여행객들의 후기를 찾아보세요. </p>
-        <button class="custom-btn btn-2" onclick="location.href='http://localhost:3000/about'">About</button>
-        <button class="custom-btn btn-2" onclick="location.href='http://localhost:3000/login'">Login</button>
-      </div>
-      <div class="frame">
+    <div id="body-wrapper">
+      <div id="body-cotent">
+        <div id="text_box" style="line-height: 20%;">
+          <p style="font-size: 40px; color:black">Wonderful Korea</p>
+          <p style="font-size: 15px; color:black">다양하고 풍부한 여행객들의 후기를 찾아보세요. </p>
+          <button class="custom-btn btn-2" onclick="location.href='http://localhost:3000/about'">About</button>
+          <button class="custom-btn btn-2" onclick="location.href='http://localhost:3000/login'">Login</button>
+        </div>
+        <div class="frame">
         
+        </div>
+        <style>
+            body {
+              background-image: url("./images/palace.jpg");
+              background-attachment:fixed;
+              background-size: cover;
+              background-repeat: no-repeat;
+            }
+        </style>
       </div>
-      <style>
-          body {
-            background-image: url("./images/palace.jpg");
-            background-attachment:fixed;
-            background-size: cover;
-            background-repeat: no-repeat;
-          }
-      </style>
+      
+      <footer class="footer">
+        <div class="footer img-wrapper">
+        <div class="img">
+          <a href="https://velog.io/@kjh950330">
+            <img src="https://pbs.twimg.com/profile_images/1228368893321736193/Ov0og7E8_400x400.jpg" style="max-width: 2%; height: auto;" alt="velog">
+          </a>
+        <div class="footertext">
+          copyright(c) 2022. jihan kong. All rights reserved.
+        </div>
+      </footer>
+
+    </div>
   </body>
 </html>

@@ -15,28 +15,44 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <link href="/public/css/master.css" rel="stylesheet" type="text/css" />
-        <div class="flex-container space-evenly">
-            <button type="button" class="btm_image" id="img_btn" onclick="location.href='http://localhost:3000/posts?limit=10&searchType=category&searchText=%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B8%8C%EC%BD%94%EC%8A%A4'"><img src="https://cdn-icons-png.flaticon.com/512/1581/1581894.png">드라이브 코스</button>
-            <button type="button" class="btm_image" id="img_btn2" onclick="location.href='http://localhost:3000/posts?limit=10&searchType=category&searchText=%EC%82%B0+%26+%EB%B0%94%EB%8B%A4%EA%B0%80+%EA%B0%80%EA%B9%8C%EC%9A%B4'"><img src="https://cdn-icons.flaticon.com/png/512/1777/premium/1777015.png?token=exp=1651126860~hmac=6bc00a0c7817c1d69d6a41ba4f70551a">산 & 바다가 가까운</button>
-            <button type="button" class="btm_image" id="img_btn3" onclick="location.href='http://localhost:3000/posts?limit=10&searchType=category&searchText=%EB%A7%9B%EC%A7%91%EC%9D%B4+%EB%A7%8E%EC%9D%80'"><img src="https://cdn-icons-png.flaticon.com/512/948/948036.png">맛집이 많은</button>
-            <button type="button" class="btm_image" id="img_btn4" onclick="location.href='http://localhost:3000/posts?limit=10&searchType=category&searchText=%EC%84%A0%EC%82%AC%EC%9C%A0%EC%A0%81%EC%A7%80'"><img src="https://cdn-icons.flaticon.com/png/512/4050/premium/4050056.png?token=exp=1651126962~hmac=af8ef1e92fd7115476d79b61a640ed23">선사유적지</button>
-            <button type="button" class="btm_image" id="img_btn5" onclick="location.href='http://localhost:3000/posts?limit=10&searchType=category&searchText=%EB%8F%84%EC%8B%9C%EA%B2%BD%EA%B4%80%EC%9D%B4+%EC%9E%88%EB%8A%94'"><img src="https://cdn-icons-png.flaticon.com/512/2942/2942149.png">도시경관이 있는</button>
+    <div id="post-body-wrapper">
+        <div class="head-text" style="line-height: 500%;">
+            <p style="font-size: 30px; font-family: 'Hi Melody', cursive; font-weight: bold; color:black"> 여행 테마 선택 </p> 
+        </div>
+        <div class="flex-container space-evenly" style="font-size: 25px; font-family: 'Hi Melody', cursive;">
+            <button type="button" class="btm_image" id="img_btn" onclick="location.href='http://localhost:3000/posts?limit=10&searchType=category&searchText=%EB%93%9C%EB%9D%BC%EC%9D%B4%EB%B8%8C%EC%BD%94%EC%8A%A4'"><img src="https://cdn-icons.flaticon.com/png/512/5810/premium/5810740.png?token=exp=1651812542~hmac=5b94e437ed58c9eb193dd187d28a045e" style="display:block; margin: auto;">드라이브 코스</button>
+            <button type="button" class="btm_image" id="img_btn2" onclick="location.href='http://localhost:3000/posts?limit=10&searchType=category&searchText=%EC%82%B0+%26+%EB%B0%94%EB%8B%A4%EA%B0%80+%EA%B0%80%EA%B9%8C%EC%9A%B4'"><img src="https://cdn-icons.flaticon.com/png/512/1543/premium/1543881.png?token=exp=1651813880~hmac=223255c11a7815a1c247bbb7539cefbd" style="display:block; margin: auto;">산 & 바다가 가까운</button>
+            <button type="button" class="btm_image" id="img_btn3" onclick="location.href='http://localhost:3000/posts?limit=10&searchType=category&searchText=%EB%A7%9B%EC%A7%91%EC%9D%B4+%EB%A7%8E%EC%9D%80'"><img src="https://cdn-icons.flaticon.com/png/512/4902/premium/4902492.png?token=exp=1651813261~hmac=c22ea35ba2b70ab7e3fe22eb603b19f1" style="display:block; margin: auto;">맛집이 많은</button>
+            <button type="button" class="btm_image" id="img_btn4" onclick="location.href='http://localhost:3000/posts?limit=10&searchType=category&searchText=%EC%84%A0%EC%82%AC%EC%9C%A0%EC%A0%81%EC%A7%80'"><img src="https://cdn-icons.flaticon.com/png/512/4902/premium/4902114.png?token=exp=1651813502~hmac=b6977154539d5c5d207b88d8a7a2274b" style="display:block; margin: auto;">선사 유적지</button>
+            <button type="button" class="btm_image" id="img_btn5" onclick="location.href='http://localhost:3000/posts?limit=10&searchType=category&searchText=%EB%8F%84%EC%8B%9C%EA%B2%BD%EA%B4%80%EC%9D%B4+%EC%9E%88%EB%8A%94'"><img src="https://cdn-icons-png.flaticon.com/512/6752/6752096.png" style="display:block; margin: auto;">도시경관이 있는</button>
         </div>
         <div id="text_box2" style="line-height: 20%;">
-            <p style="font-size: 15px; font-weight: bold; color:black">여행에 관한 당신의 이야기를 들려주세요! </p>
+            <p style="font-size: 20px; font-family: 'Hi Melody', cursive; font-weight: bold; color:black">여행에 관한 당신의 이야기를 들려주세요! </p>
             <button class="custom-btn btn-11" onclick="location.href='http://localhost:3000/posts/new'">GO!</button>
         </div>
-        <div class="frame">
-        
-        </div>
+    </div>
+    
         <style>
+            @import url('https://fonts.googleapis.com/css2?family=Akshar&family=Dongle:wght@700&family=Hi+Melody&family=Oswald&display=swap');
             body {
-                background-image: url("./images/sunset.jpg");
+                font-family: 'Hi Melody', cursive;
+                background-image: url("./images/gyungbokpalace.jpg");
                 background-attachment:fixed;
                 background-size: cover;
                 background-repeat: no-repeat;
-          }
-        </style> 
+            }
+        </style>
+
+        <footer class="footer">
+            <div class="footer img-wrapper">
+            <div class="img">
+            <a href="https://velog.io/@kjh950330">
+                <img src="https://pbs.twimg.com/profile_images/1228368893321736193/Ov0og7E8_400x400.jpg" style="max-width: 2%; height: auto;" alt="velog">
+            </a>
+            <div class="footertext">
+            copyright(c) 2022. jihan kong. All rights reserved.
+            </div>
+        </footer>
 </body>
 
 <link rel="stylesheet" href="/css/master.css">
