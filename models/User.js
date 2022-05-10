@@ -11,7 +11,7 @@ var userSchema = mongoose.Schema({
     },
     password: { type: String, required: [true, 'Password는 필수항목입니다!'], select: false },
     name: {
-        type: String, required: [true, 'Name은 필수항목입니다!'], match: [/^.{4,12}$/, '4-12자로 만들어주세요!'],
+        type: String, required: [true, 'Name은 필수항목입니다!'], match: [/^.{3,12}$/, '3-12자로 만들어주세요!'],
         trim: true
     },
     email: {

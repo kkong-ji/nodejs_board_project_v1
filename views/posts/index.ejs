@@ -35,7 +35,7 @@
                                 <tr>
                                     <td class="numId"><%= post.numId %></td>
                                     <td>
-                                        <a href="/posts/<%= post._id %><%= getPostQueryString() %>" class="title-container">
+                                        <a href="/posts/<%= post._id %><%= getPostQueryString() %>" class="title-container" style="color:black">
                                             <div data-search-highlight="title" class="title-ellipsis ellipsis float-left">
                                                 <span class="title-text">
                                                     <%= post.title %>
@@ -54,8 +54,7 @@
                                     </td>
                                     <td class="views"><%= post.views %></td>
                                     <td class="author">
-                                        <a
-                                            href="/posts<%= getPostQueryString(false, { searchType:'author!', searchText:post.author.username }) %>">
+                                        <a href="/posts<%= getPostQueryString(false, { searchType:'author!', searchText:post.author.username }) %>" style="color:white">
                                             <div data-search-highlight="author" class="ellipsis">
                                                 <%= post.author ? post.author.username : "" %>
                                             </div>
@@ -116,8 +115,7 @@
                         <label>Search</label>
                         <div class="input-group">
                             <select name="searchType" class="custom-select">
-                                <option value="title,body" <%=searchType=='title,body' ?'selected':'' %>>Title, Body
-                                </option>
+                                <option value="title,body" <%=searchType=='title,body' ?'selected':'' %>>Title, Body</option>
                                 <option value="title" <%=searchType=='title' ?'selected':'' %>>Title</option>
                                 <option value="body" <%=searchType=='body' ?'selected':'' %>>Body</option>
                                 <option value="author" <%=searchType=='author' ?'selected':'' %>>Author</option>
@@ -125,13 +123,20 @@
                             </select>
                             <input minLength="3" type="text" name="searchText" value="<%= searchText %>">
                             <div class="input-group-append">
-                                <button class="btn btn-outline-primary" type="submit">Search</button>
+                                <button class="btn btn-outline-primary" type="submit">search</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </form>
         </div>
+
+        <style>
+            body {
+                background-image: url("./images/namsan.jpg");
+                background-size: cover;
+            }
+        </style>
 </body>
 
 </html>

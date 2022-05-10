@@ -2,7 +2,9 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-}   
+}
+
+a:link { color:black }
 
 .background-image {
     text-align: center;
@@ -104,10 +106,12 @@ img {
     overflow: hidden;
     transition: all 0.3s ease;
   }
+
   .btn-11:hover {
-     background: #000;
+    background: #000;
     color: #fff;
   }
+
   .btn-11:before {
       position: absolute;
       content: '';
@@ -119,6 +123,7 @@ img {
       background-color: #fff;
       animation: shiny-btn1 3s ease-in-out infinite;
   }
+
   .btn-11:active{
     box-shadow:  4px 4px 6px 0 rgba(255,255,255,.3),
                 -4px -4px 6px 0 rgba(116, 125, 136, .2), 
@@ -144,7 +149,6 @@ img {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    /* 1 */
 }
 
 .board-table {
@@ -233,11 +237,8 @@ img {
     float: right;
     text-align: center;
     margin-right: 10px;
-
-    /* 그림을 둥글게*/
     border-radius: 50%;
-    ;
-  }
+}
 
 .post-body-wrapper {
     display: flex;
@@ -253,7 +254,7 @@ img {
 
 #body-content {
     margin-top: 100px;
-    padding-bottom: 500px; /* footer의 높이 */
+    padding-bottom: 500px; 
 }
 
 #text_box2 {
@@ -264,7 +265,6 @@ img {
     top: 50%;
     width: 400px;
     transform: translate(-50%, 100%);
-
     text-align: center;
     padding: 30px 0;
 }

@@ -32,9 +32,13 @@
                                 <small>📁 Attachment: <a href="/files/<%= post.attachment.serverFileName %>/<%= post.attachment.originalFileName %>"><%= post.attachment.originalFileName %></a> (<%= util.bytesToSize(post.attachment.size) %>)</small>
                             </div>
                         <% } %>
-                        <div class="post-body p-2" data-search-highlight="body">
-                            <%= post.body %>
-                        </div>
+                        <% if(post.attachment) { %>
+                            <img class="fit-picture"
+                                src="/files/<%= post.attachment.serverFileName %>/<%= post.attachment.originalFileName %>">
+                        <% } %>
+                            <div class="post-body p-2" data-search-highlight="body">
+                                <%= post.body %>
+                            </div>
                     </div>
 
                     <div class="col-md-5 col-lg-4 col-xl-3 order-sm-1 order-md-2">
@@ -87,7 +91,16 @@
           parentComment: null,
         }); %>
       </div>
-
     </div>
+
+    <style>
+        body {
+            background-size:cover;
+            background-repeat: no-repeat;
+            background-color: rgb(144, 187, 240)
+        }
+    </style>
+    
   </body>
+
 </html>
