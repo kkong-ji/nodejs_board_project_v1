@@ -49,7 +49,7 @@ router.get('/:username/edit', util.isLoggedin, checkPermission, function (req, r
     }
 });
 
-// update //
+// update
 router.put('/:username', util.isLoggedin, checkPermission, function (req, res, next) {
     User.findOne({ username: req.params.username })
         .select('password')

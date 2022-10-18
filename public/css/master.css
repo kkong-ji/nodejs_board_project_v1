@@ -78,8 +78,9 @@ h1 {
 }
 
 .btm-image {
-    text-align:justify
+    text-align:justify;
 }
+
 
 img {
     max-width: 70%;
@@ -171,11 +172,11 @@ img {
 }
 
 .post-index-tool {
-    max-width: 500px;
+    max-width: 380px;
 }
 
 .post-index-tool input[type='text'] {
-    max-width: 130px;
+    max-width: 150px;
 }
 
 .user-form {
@@ -213,7 +214,6 @@ img {
 {
     text-decoration: underline;
 }
-
 
 .footer{
     width: 100%;
