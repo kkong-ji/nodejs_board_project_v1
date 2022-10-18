@@ -9,7 +9,7 @@ var postSchema = mongoose.Schema({ // 1
     title: { type: String, required: [true, 'Title은 필수 항목입니다!'] },
     body: { type: String, required: [true, 'Body는 필수 항목입니다!'] },
     author: { type: mongoose.Schema.Types.ObjectId, ref: 'user', required: true },
-    category: { type: String },
+    category: { type: String, required: [true, 'Category는 필수 항목입니다!'] },
     views:{type:Number, default:0},
     numId:{type:Number},
     attachment:{type:mongoose.Schema.Types.ObjectId, ref:'file'},
